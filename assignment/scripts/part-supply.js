@@ -48,7 +48,13 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
 for (parts of supplyChanges){
-  console.log(parts);
+  if(parts > 0){
+    console.log(`Added ${parts} parts`);
+  } else if(parts === 0) {
+    console.log(`No change`);
+  } else {
+    console.log(`Removed ${parts} parts`);
+  }
 }
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
