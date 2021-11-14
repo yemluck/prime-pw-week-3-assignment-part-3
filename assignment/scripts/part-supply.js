@@ -34,11 +34,11 @@ supplyChanges.push(25); //console.log(supplyChanges);
 console.log('6. Showing supplyChanges...');
 for (i=0; i<supplyChanges.length; i++){
   if(supplyChanges[i] > 0){
-    console.log(`Added ${supplyChanges[i]} parts`);
+    console.log(`Added ${supplyChanges[i]} parts.`);
   }else if(supplyChanges[i] === 0){
     console.log('No change');
   } else {
-    console.log(`Removed ${supplyChanges[i]} parts`);
+    console.log(`Removed ${supplyChanges[i]} parts.`);
   }
 }
 
@@ -49,11 +49,11 @@ console.log('---  Stretch Goals  ---');
 console.log('7. Showing supplyChanges with "for of" loop');
 for (parts of supplyChanges){
   if(parts > 0){
-    console.log(`Added ${parts} parts`);
+    console.log(`Added ${parts} parts.`);
   } else if(parts === 0) {
     console.log(`No change`);
   } else {
-    console.log(`Removed ${parts} parts`);
+    console.log(`Removed ${parts} parts.`);
   }
 }
 
@@ -82,4 +82,13 @@ let sum = 0
 for (i of supplyChanges){
   sum +=i;
   }
-console.log(sum);
+console.log('Total sum of all parts using for of loop is', sum);
+
+// while loop alternative
+let add = 0
+let x = 0
+while(x < supplyChanges.length){
+  add += supplyChanges[x];
+  x++;
+}
+console.log('Total sum of all parts using while loop:', add);
